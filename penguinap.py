@@ -109,7 +109,7 @@ def penguin():
 #         "flipper_length_mm"
 #     with tab5:
 #         "heatmap"
-penguin()
+#penguin()
 
 #     def aiml_main():
 #     filename = indata()
