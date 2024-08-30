@@ -18,23 +18,21 @@ if user_pw=="1234" and user_id=="abc":
     st.sidebar.title("★수이의 포트폴리오★")
     #st.image("빨간머리앤셜리.jpg")
 
-    menu  =  st.sidebar.radio("메뉴선택", ["파이썬기초","탐색적 분석: 전기자동차", "머신러닝","팀별프로젝트","수이는","펭귄"],index=None)
+    menu  =  st.sidebar.radio("메뉴선택", ["수이는","파이썬기초","탐색적 분석: 전기자동차", "머신러닝","팀별프로젝트","펭귄"],index=None)
     st.sidebar.write(menu)
 
-    if menu=="탐색적 분석: 전기자동차":
+    if menu== "수이는":
+        su.sui()  #파일로 만들어서 호출하기
+        #st.write("수이는 파이썬언어가 어렵지만 열심히 하고 있습니다.")  
+        #st.image("초록머리앤.jpg")
+    elif menu=="파이썬기초":
+        pb.basic()    
+    elif menu=="탐색적 분석: 전기자동차":
         ec.elec_exe()
     elif menu=="머신러닝":
-        cp.aiml_main()
-        # st.header("공사중")    
-    elif menu=="파이썬기초":
-        pb.basic()
+        cp.aiml_main() 
     elif menu=="팀별프로젝트":
         pr.main_food()
-    elif menu=="수이는": #파일로 만들어서 호출하기
-        #st.write("수이는 파이썬언어가 어렵지만 열심히 하고 있습니다.")  
-        #st.image("초록머리앤.jpg") 
-        su.sui()
     elif menu=="펭귄":
         pe.penguin()
-
 
