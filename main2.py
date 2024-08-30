@@ -33,6 +33,6 @@ if user_pw=="1234" and user_id=="abc":
         cp.aiml_main() 
     elif menu=="팀별프로젝트":
         pr.main_food()
-    elif menu=="펭귄":
-        pe.penguin()
+    # elif menu=="펭귄":
+    #     pe.penguin()
 
