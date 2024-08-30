@@ -23,24 +23,21 @@ def penguin():
     df['species'].value_counts()
     sns.countplot(x='species', data=df)
     plt.show()
-    return(df)
-
-def penguin2(df):
     #펭귄 종별 날개 길이를 박스 플롯으로 시각화하기
     plt.figure(figsize=(8,6))
     sns.boxplot(x='species', y='flipper_length_mm', hue='species', data=df)
     plt.show()
 
-def penguin3(df):
+
     #특징값을 산점도로 시각화하기
     sns.scatterplot(x='culmen_depth_mm', y='culmen_length_mm', hue='species', data=df)
     plt.show()
 
-def penguin4(df):
+
     sns. scatterplot(x='flipper_length_mm', y='culmen_length_mm', hue='species', data=df)
     plt.show()
 
-def penguin0(df):
+
     #특징과 타깃 선정하기
     df1 = df[['culmen_depth_mm', 'culmen_length_mm', 'flipper_length_mm', 'species']]
     dataset = df1.values
@@ -100,18 +97,32 @@ def penguin0(df):
 
     st.write(knn.predict(new_scaled))
 
-def penguin():
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["countplot", "boxplot","culmen_depth_mm","flipper_length_mm","heatmap"])
-    with tab1:
-        penguin(df)
-    with tab2:
-        penguin2(df)
-    with tab3:
-        penguin3(df)
-    with tab4:
-        penguin4(df)
-    with tab5:
-        penguin0(df)                                     
+# def penguin():
+#     tab1, tab2, tab3, tab4, tab5 = st.tabs(["countplot", "boxplot","culmen_depth_mm","flipper_length_mm","heatmap"])
+#     with tab1:
+#         "countplot"
+#     with tab2:
+#         "boxplot"
+#     with tab3:
+#         "culmen_depth_mm"
+#     with tab4:
+#         "flipper_length_mm"
+#     with tab5:
+#         "heatmap"
+penguin()
+
+#     def aiml_main():
+#     filename = indata()
+#     if st.button("예측"): #st. button("예측")==True
+#         model(filename)
+
+# if __name__=='__main__':
+#     aiml_main()
+    # filename = indata()
+    #   #st. button("예측")==True
+    # if st.button("예측"): 
+    #     model(filename)
+    #indata()                              
        
 
 
