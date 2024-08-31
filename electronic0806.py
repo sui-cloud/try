@@ -83,4 +83,4 @@ while True:
     else:
         print("입력 오류")
 
-basic()
+
