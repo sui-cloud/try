@@ -36,7 +36,7 @@ def main_food():
         # bs.bunsik()
         if not bs.bunsik():
             st.write("다시 선택해 주세요")
-main_food()           
+         
     
         # else:
             # break
