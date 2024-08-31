@@ -8,7 +8,7 @@ def sui():
     st.write("파이썬 데이터 분석과 오렌지 데이터 분석 및 팀별 프로젝트를 수행하였습니다.")
     st.write("pandas 모듈과 Matplotlib.Seaborn 라이브러리를 활용한 데이터 시각화 orange3를 활용한") 
     st.write("데이터 분석을 배웠습니다. 오렌지3책의 프로젝트를 하나씩 해나갈 예정입니다.")
-sui()
+
 
 # import streamlit as st
 # def sui():
