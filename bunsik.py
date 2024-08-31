@@ -1,3 +1,4 @@
+import streamlit as st
 def bunsik(): 			# 분식함수 정의
     bunsik = [
         {
@@ -21,7 +22,7 @@ def bunsik(): 			# 분식함수 정의
     ]
 
     while True:
-        money = int(input("예산은 얼마인가요? "))
+        money = int(st.number_input("예산은 얼마인가요? "))
         kk = []
         available = False					        # available은 예산에 맞는 메뉴를 찾았는지를 추적하는 설정
 
@@ -33,15 +34,15 @@ def bunsik(): 			# 분식함수 정의
 
         if kk:
             kk.sort(key=lambda x: x[0])		# 예산에 맞는 메뉴를 가격의 올림차순으로 정렬
-            print("예산에 맞는 메뉴예요:")
-            print("*"*75)
+            st.write("예산에 맞는 메뉴예요:")
+            st.write("*"*75)
             for item in kk:					      # 예산에 맞는 메뉴를 ‘가격, 메뉴 이름, 음식점 이름, 주소’ 내용으로
-                print(f"{item[0]} \"{item[1]}\" {item[2]} {item[3]}")
-            print("*"*75)
+                st.write(f"{item[0]} \"{item[1]}\" {item[2]} {item[3]}")
+            st.write("*"*75)
             available = True              # 예산에 맞는 메뉴를 찾았음을 표시
 
         if available:
             return True  					        # 예산에 맞는 메뉴를 찾으면 True값으로 반복문 빠져나감
         else:
-            print("예산에 맞는 메뉴가 없어요")	# 예산에 맞는 메뉴가 없으면 False값으로 메인화면 선택으로 되돌아감
+            st.write("예산에 맞는 메뉴가 없어요")	# 예산에 맞는 메뉴가 없으면 False값으로 메인화면 선택으로 되돌아감
             return False
