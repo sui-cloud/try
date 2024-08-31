@@ -1,3 +1,4 @@
+import streamlit as st
 def fast_food():
     fast_food = [
         {
@@ -21,7 +22,7 @@ def fast_food():
     ]
 
     while True:
-        money = int(input("예산은 얼마인가요? "))
+        money = int(st.number_input("예산은 얼마인가요? "))
         kk = []
         available = False
 
@@ -33,13 +34,13 @@ def fast_food():
 
         if kk:
             kk.sort(key=lambda x: x[0])
-            print("예산에 맞는 메뉴예요:")
+            st.write("예산에 맞는 메뉴예요:")
             for item in kk:
-                print(f"{item[0]} \"{item[1]}\" {item[2]} {item[3]}")
+                st.write(f"{item[0]} \"{item[1]}\" {item[2]} {item[3]}")
             available = True
 
         if available:
             return True  					        # 예산에 맞는 메뉴를 찾으면 True값으로 반복문 빠져나감
         else:
-            print("예산에 맞는 메뉴가 없어요")	# 예산에 맞는 메뉴가 없으면 False값으로 메인화면 선택으로 되돌아감
+            st.write("예산에 맞는 메뉴가 없어요")	# 예산에 맞는 메뉴가 없으면 False값으로 메인화면 선택으로 되돌아감
             return False
