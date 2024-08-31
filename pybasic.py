@@ -33,4 +33,4 @@ def basic():
     
     with tab2:
         recommand_food()
-basic() 
+
