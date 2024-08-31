@@ -42,4 +42,3 @@ def main_food():
             # break
     # else:
         # st.write("잘못 입력하셨어요! 다시 선택해 주세요")
-           
