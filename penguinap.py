@@ -97,3 +97,5 @@ def penguin():
 
     st.write(knn.predict(new_scaled))
 
+
+
