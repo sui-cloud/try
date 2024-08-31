@@ -96,6 +96,7 @@ def penguin():
     new_scaled = scaler.fit_transform(dataset_new)
 
     st.write(knn.predict(new_scaled))
+penguin()
 
 # def penguin():
 #     tab1, tab2, tab3, tab4, tab5 = st.tabs(["countplot", "boxplot","culmen_depth_mm","flipper_length_mm","heatmap"])
